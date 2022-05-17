@@ -2,9 +2,17 @@ chance = 0
 min=0
 max=100
 guess = None
+play = True
 
-while True:
+while play:
+    if min == max:
+        print("You are cheating me!!!")
+        break
+
     guess = round((min+max)/2)
+
+    chance += 1
+    
     print(f"I guess you have {guess}")
     clue = input("Reply : ")
     
@@ -15,7 +23,6 @@ while True:
         min = min
         max = guess
     else:
-        break
-    chance += 1
-        
-print(f"I found it in {chance} chances")
+        play = False
+else:
+    print(f"I found it in {chance} chances")

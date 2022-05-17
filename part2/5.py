@@ -5,6 +5,5 @@ def find_number(list,number):
     else:
         print(f'{number} is not in list')
 
-list = list(input("enter the list :"))
 number = int(input("enter the number :"))
-find_number(list,number)
+find_number([1,2,3,4],number)
