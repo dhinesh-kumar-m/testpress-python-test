@@ -5,7 +5,7 @@ posibble = {"strong":set("1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqr
 
 def get_password(n,level):
     password = ""
-    for _ in range(1,n+1):
+    for _ in range(0,n):
         password += posibble[level].pop()
     return password
     
